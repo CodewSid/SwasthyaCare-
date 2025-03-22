@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('doc.avif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #2575fc;
+            box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            background: #fff;
+            padding: 0 5px;
+            color: #aaa;
+            font-size: 0.9rem;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .signup-btn {
+            background: #6a11cb;
+            color: #fff;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .signup-btn:hover {
+            background: #4a0e9e;
+        }
+
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label {
+            top: -10px;
+            font-size: 0.75rem;
+            color: #2575fc;
+        }
+
+        .login-btn {
+            background: #2575fc;
+            color: #fff;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: #1a5bb8;
+        }
+
+        .signup-link {
+            margin-top: 1rem;
+            display: block;
+            font-size: 0.9rem;
+            color: #2575fc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .signup-link:hover {
+            color: #1a5bb8;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Doctor Login</h2>
+        <form>
+            <div class="form-group">
+                <input type="text" id="emailOrUserId" placeholder=" " required>
+                <label for="emailOrUserId">Email or User ID</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder=" " required>
+                <label for="password">Password</label>
+            </div>
+            <button type="button" class="login-btn" onclick="validateAndRedirect()">Login</button>
+            <script>
+                function validateAndRedirect() {
+                    const emailOrUserId = document.getElementById('emailOrUserId').value.trim();
+                    const password = document.getElementById('password').value.trim();
+
+                    if (emailOrUserId && password) {
+                        window.location.href = 'docdash.html'; 
+                    } else {
+                        alert('Please fill in all required fields.');
+                    }
+                }
+            </script>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        body {
+            background-image: url('h7.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #94cd5b;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #f9f7f7;
+            border-radius: 5px;
+        }
+        .login-btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        footer {
+            background-color: #94cd5b;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px 20px;
+        }
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>SwasthyaCare+</h1>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about-us">About Us</a>
+            <a href="#contact-us">Contact Us</a>
+        </nav>
+        <a href="login1.html"><button class="login-btn">Login</button></a>
+    </header>
+    <main>
+
+    <div class="container"></div>
+        <div class="row text-center mb-4">
+            <div class="col">
+                <h2 class="animate__animated animate__fadeInDown" style="color: #000000; cursor: pointer;" onclick="alert('Welcome to SwasthyaCare+!')">Welcome to SwasthyaCare+</h2>
+                <p class="animate__animated animate__fadeInUp">Your one-stop solution for all healthcare needs. We are committed to providing the best services to ensure your well-being.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center animate__animated animate__zoomIn">
+                <div class="card shadow-sm">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Personalized Health Plans</h5>
+                        <p class="card-text">Get customized health plans tailored to your needs by our expert team.</p>
+                        <a href="#services" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center animate__animated animate__zoomIn">
+                <div class="card shadow-sm">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">24/7 Consultation</h5>
+                        <p class="card-text">Connect with our doctors anytime, anywhere for immediate assistance.</p>
+                        <a href="#services" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center animate__animated animate__zoomIn">
+                <div class="card shadow-sm">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Wellness Programs</h5>
+                        <p class="card-text">Participate in our wellness programs to maintain a healthy lifestyle.</p>
+                        <a href="#services" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 text-center animate__animated animate__fadeInLeft">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Health Tips</h5>
+                        <p class="card-text">Stay updated with daily health tips to improve your lifestyle and well-being.</p>
+                        <a href="#services" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center animate__animated animate__fadeInRight">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Community Support</h5>
+                        <p class="card-text">Join our community to share and gain insights on health-related topics.</p>
+                        <a href="#services" class="btn btn-primary">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col text-center">
+                <h3 class="animate__animated animate__fadeIn">Why Choose SwasthyaCare+?</h3>
+                <p class="animate__animated animate__fadeIn">We prioritize your health and provide top-notch services with a team of dedicated professionals.</p>
+                <a href="#about-us" class="btn btn-success">Discover More</a>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <p>Follow us on: 
+            <a href="https://instagram.com" target="_blank">Instagram</a> | 
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </p>
+        <p>Contact us at: maxtac@gmail.com | +91 6397797576</p>
+    </footer>
+</body>
+</html>

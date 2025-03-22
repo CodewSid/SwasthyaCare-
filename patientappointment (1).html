@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Appointment</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('pa1.avif') no-repeat center center fixed;
+            background-size: cover;
+            animation: bgAnimation 10s infinite alternate;
+            color: #fff;
+        }
+
+        @keyframes bgAnimation {
+            0% { filter: brightness(0.8); }
+            100% { filter: brightness(1.2); }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .appointment {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .appointment h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .appointment p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        .add-appointment {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .add-appointment button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-appointment button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Appointments</h1>
+        <div id="appointments">
+            <!-- Appointment records will be displayed here -->
+        </div>
+        <div class="add-appointment">
+            <button onclick="addAppointment()">Add Appointment</button>
+        </div>
+    </div>
+
+    <script>
+        
+
+        function displayAppointments() {
+            const appointmentsDiv = document.getElementById('appointments');
+            appointmentsDiv.innerHTML = '';
+            appointments.forEach((appointment, index) => {
+                appointmentsDiv.innerHTML += `
+                    <div class="appointment">
+                        <h3>Appointment ${index + 1}</h3>
+                        <p>Date: ${appointment.date}</p>
+                        <p>Time: ${appointment.time}</p>
+                        <p>Doctor: ${appointment.doctor}</p>
+                    </div>
+                `;
+            });
+        }
+
+        function addAppointment() {
+            const newAppointment = {
+                date: prompt('Enter appointment date (YYYY-MM-DD):'),
+                time: prompt('Enter appointment time (e.g., 10:00 AM):'),
+                doctor: prompt('Enter doctor name:')
+            };
+            if (newAppointment.date && newAppointment.time && newAppointment.doctor) {
+                appointments.push(newAppointment);
+                displayAppointments();
+            } else {
+                alert('All fields are required!');
+            }
+        }
+
+
+        displayAppointments();
+    </script>
+</body>
+</html>"></html>

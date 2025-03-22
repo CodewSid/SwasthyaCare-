@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-container button.doctor {
+            background-color: #4caf50;
+            color: white;
+        }
+        .login-container button.doctor:hover {
+            background-color: #45a049;
+        }
+        .login-container button.patient {
+            background-color: #2196f3;
+            color: white;
+        }
+        .login-container button.patient:hover {
+            background-color: #1e88e5;
+        }
+    </style>
+    <script>
+        function loginAs(role) {
+            if (role === 'doctor') {
+                window.location.href = '/path/to/doclog';
+            } else if (role === 'patient') {
+                window.location.href = '/path/to/patientlogin';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <a href="/Users/siddhantmittal/Documents/promptx/doclog.html"><button>Login as Doctor</button></a>
+        <a href="/Users/siddhantmittal/Documents/promptx/patientlogin.html"><button>Login as Patient</button></a> 
+    </div>
+
+    <script>
+        function loginAs(role) {
+            alert(`Logging in as ${role}`);
+            // Add your login logic here
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+        header {
+            background-color: #94cd5b;
+            color: rgb(0, 0, 0);
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 1rem;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #94cd5b;
+        }
+        body {
+            background-image: url('h7.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(0.5px);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YOUR HEALTH, OUR PRIORITY</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Services</h2>
+            <p>Explore various healthcare services available for you.</p>
+            <button  onclick="alert('Navigating to Services')">View Services</button>
+        </div>
+        <div class="card">
+            <h2>Video Consultancy</h2>
+            <p>Connect with doctors through video consultations.</p>
+            <a href="vc.html">
+                <button>Start Consultation</button>
+            </a>
+        </div>
+        <div class="card">
+            <h2>Appointments</h2>
+            <p>Manage your upcoming and past appointments.</p>
+            <a href="patientappointment.html"><button onclick="alert('Viewing Appointments')">View Appointments</button></a>
+        </div>
+        <div class="card">
+            <h2>Medical Records</h2>
+            <p>Access your medical history and reports here.</p>
+            <a href="medrec.html"><button onclick="alert('Accessing Medical Records')">View Records</button></a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 SwasthyaCare+. All rights reserved.</p>
+    </footer>
+</body>
+</html>
